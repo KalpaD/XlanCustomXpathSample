@@ -24,12 +24,12 @@ public class CustomXpathTest extends TestCase {
 		System.setProperty("javax.xml.transform.TransformerFactory",
 				"org.apache.xalan.processor.TransformerFactoryImpl");
 
-		simpleTransform("src/test/resources/input.xml",
+		transform("src/test/resources/input.xml",
 				"src/test/resources/customXpath.xslt",
 				"src/test/resources/out.xml");
 	}
 
-	public static void simpleTransform(String sourcePath, String xsltPath,
+	public static void transform(String sourcePath, String xsltPath,
 			String resultDir) {
 		TransformerFactory tFactory = TransformerFactory.newInstance();
 		try {

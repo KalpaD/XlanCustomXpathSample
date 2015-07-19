@@ -5,7 +5,7 @@
 	<xsl:output method="xml" version="1.0" encoding="UTF-8"
 		indent="yes" />
 
-	<xsl:template match="node()">
+	<xsl:template match="node()"/>
 		<xsl:element name="{custom:toLowerCamelCase(local-name())}">
 			<xsl:value-of select="text()"></xsl:value-of>
 			<xsl:apply-templates select="node()|@*" />
